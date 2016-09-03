@@ -40,7 +40,8 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  nhl_puck: "https://pbs.twimg.com/profile_images/679452578493644800/_t1NLhgh_400x400.png"
 };
 
 preloader(images);
@@ -56,21 +57,17 @@ export default class Presentation extends React.Component {
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Hello World
+              Hockey Charts 101
             </Heading>
             <Heading size={1} fit caps>
-              A ReactJS Presentation Library
+              Smart Data Viz, Smarter Decisions 
             </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
+            <Link href="https://twitter.com/Puck_Quant">
+              <Text bold margin="25px">by Derek Braid (@Puck_Quant)</Text>
             </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
+            <Image src={images.nhl_puck} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Wait what?
             </Heading>
