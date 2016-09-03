@@ -30,10 +30,9 @@ export default class Presentation extends Component {
           <Slide transition={["zoom"]} bgColor="primary">
             <Title />
           </Slide>
-          
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
             <Image src={images.nhl_puck} margin="0px auto 40px" height="293px"/>
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
+            <Heading caps size={3} textColor="primary" textFont="primary">
               about me
             </Heading>
           </Slide>
@@ -53,6 +52,12 @@ export default class Presentation extends Component {
                 computer science
               </Heading>
             </Appear>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <BlockQuote>
+              <Quote>You can't outrun a bear!</Quote>
+              <Cite>Unknown</Cite>
+            </BlockQuote>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>The "Right" Approach</Heading>
@@ -88,6 +93,31 @@ export default class Presentation extends Component {
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
+              Great time to be alive: Human + Machine > Human
+            </Heading>
+            <Layout>
+              <Fill>
+                <Heading fit size={3} textColor="tertiary">
+                  Software eats the world...
+                </Heading>
+                <List margin="10px">
+                  <ListItem>1997: Kasperov falls to chess robot</ListItem>
+                  <ListItem>2016: AlphaGO champion defeated by Google AI (Deepmind) team</ListItem>
+                </List>
+              </Fill>
+              <Fill>
+                <Heading fit size={3} textColor="tertiary">
+                  Meanwhile in sports...
+                </Heading>
+                <List margin="10px">
+                  <ListItem>2003: Moneyball</ListItem>
+                  <ListItem>2016: most NHL teams (~66% have not embraced 'analytics')</ListItem>
+                </List>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
               Absolute vs. Relative Performance
             </Heading>
             <Markdown>
@@ -98,12 +128,6 @@ Can we visualize both a single player and the whole league?
 * no wasted ink, no wasted time/energy
               `}
             </Markdown>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>You can't outrun a bear!</Quote>
-              <Cite>Unknown</Cite>
-            </BlockQuote>
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
@@ -117,6 +141,33 @@ Simple way to visualize both relative and absolute performance
               `}
             </Markdown>
           </Slide>
+          <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
+            <Appear fid="1">
+              <Heading size={1} caps fit textColor="primary">
+                Which Player Is Better?
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={1} caps fit textColor="tertiary">
+                Left or Right?
+              </Heading>
+            </Appear>
+            <Appear fid="3">
+              <Heading size={1} caps fit textColor="primary">
+                Top is best, bottom is worst
+              </Heading>
+            </Appear>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="20px" margin="20px" width="66%" src={images.players.subban_slug.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="20px" margin="20px" width="66%" src={images.players.weber_slug.replace("/", "")}/>
+              </Fill>
+            </Layout>
+          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Layout>
               <Fill>
@@ -124,6 +175,16 @@ Simple way to visualize both relative and absolute performance
               </Fill>
               <Fill>
                 <Image padding="20px" margin="20px" width="100%" src={images.players.weber.replace("/", "")}/>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="20px" margin="20px" width="66%" src={images.players.kopi_slug.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="20px" margin="20px" width="66%" src={images.players.ovi_slug.replace("/", "")}/>
               </Fill>
             </Layout>
           </Slide>
