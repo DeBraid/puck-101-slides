@@ -4,6 +4,7 @@ import { Heading } from "spectacle";
 export default class Interactive extends Component {
   constructor() {
     super();
+    this.demo_link = 'http://localhost:8888/#/skaters?TOIMin=1000&Team=&Player_Name=&Pos=&season=201316&situation=5v5';
     this.state = {
       count: 0
     };
@@ -13,6 +14,7 @@ export default class Interactive extends Component {
     this.setState({
       count: this.state.count + 1
     });
+    window.location = this.demo_link;
   }
   render() {
     const styles = {
@@ -29,15 +31,10 @@ export default class Interactive extends Component {
     };
     return (
       <div>
-      {this.state.count < 5 ?
-        <div>
-          <Heading size={5} textColor="black">
-            The button has been clicked {this.state.count} times
-          </Heading>
-          <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
-        </div> :
-          <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
-        }
+        <Heading size={5} textColor="black">
+          The demo has been viewed {this.state.count} times
+        </Heading>
+        <button style={styles} type="button" onClick={this.handleClick}>View Demo</button>
       </div>
     );
   }

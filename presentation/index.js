@@ -1,166 +1,162 @@
 // Import React
-import React from "react";
-
-// Import Spectacle Core tags
+import React, {Component} from "react";
+import Constants from "./Constants.js";
 import {
-  Appear,
-  BlockQuote,
-  Cite,
-  CodePane,
-  Deck,
-  Fill,
-  Heading,
-  Image,
-  Layout,
-  Link,
-  ListItem,
-  List,
-  Markdown,
-  Quote,
-  Slide,
-  Spectacle,
-  Text
+  Appear, BlockQuote, Cite, CodePane, 
+  Deck, Fill, Heading, Image, Layout, 
+  Link, ListItem, List, Markdown, 
+  Quote, Slide, Spectacle, Text
 } from "spectacle";
 
-// Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
-
-// Import theme
 import createTheme from "spectacle/lib/themes/default";
-
 // Import custom component
 import Interactive from "../assets/interactive";
+import Title from "./slides/Title.js";
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-
-const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png"),
-  nhl_puck: "https://pbs.twimg.com/profile_images/679452578493644800/_t1NLhgh_400x400.png"
-};
-
+const {images} = Constants;
 preloader(images);
+const theme = createTheme({ primary: "#e77423" });
 
-const theme = createTheme({
-  primary: "#e77423"
-});
-
-export default class Presentation extends React.Component {
+export default class Presentation extends Component {
   render() {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
           <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              Hockey Charts 101
-            </Heading>
-            <Heading size={1} fit caps>
-              Smart Data Viz, Smarter Decisions 
-            </Heading>
-            <Link href="https://twitter.com/Puck_Quant">
-              <Text bold margin="25px">by Derek Braid (@Puck_Quant)</Text>
-            </Link>
+            <Title />
           </Slide>
+          
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
             <Image src={images.nhl_puck} margin="0px auto 40px" height="293px"/>
             <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
+              about me
             </Heading>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
-                Full Width
+                biochemistry
               </Heading>
             </Appear>
             <Appear fid="2">
               <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
+                finance
               </Heading>
             </Appear>
             <Appear fid="3">
               <Heading size={1} caps fit textColor="primary">
-                Background Imagery
+                computer science
               </Heading>
             </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
+            <Heading caps fit>The "Right" Approach</Heading>
             <Layout>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
+                  stats?
                 </Heading>
               </Fill>
               <Fill>
                 <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
+                  eye test?
                 </Heading>
               </Fill>
             </Layout>
           </Slide>
+          <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
+            <Appear fid="1">
+              <Heading size={1} caps fit textColor="primary">
+                It's a trap!
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={1} caps fit textColor="tertiary">
+                They are the same
+              </Heading>
+            </Appear>
+            <Appear fid="3">
+              <Heading size={1} caps fit textColor="primary">
+                We observe outcomes
+              </Heading>
+            </Appear>
+          </Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Absolute vs. Relative Performance
+            </Heading>
+            <Markdown>
+              {`
+Can we visualize both a single player and the whole league?
+* data tables are noisey
+* chart magic is confusing
+* no wasted ink, no wasted time/energy
+              `}
+            </Markdown>
+          </Slide>
           <Slide transition={["slide"]} bgColor="black">
             <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
+              <Quote>You can't outrun a bear!</Quote>
+              <Cite>Unknown</Cite>
             </BlockQuote>
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
+              Box and Whisker Plots
             </Heading>
             <Markdown>
               {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
+Simple way to visualize both relative and absolute performance
+* identify the player
+* compare to peers
               `}
             </Markdown>
           </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="20px" margin="20px" width="100%" src={images.players.subban.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="20px" margin="20px" width="100%" src={images.players.weber.replace("/", "")}/>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="20px" margin="20px" width="100%" src={images.players.kopi.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="20px" margin="20px" width="100%" src={images.players.ovi.replace("/", "")}/>
+              </Fill>
+            </Layout>
           </Slide>
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
             <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+              <Appear><ListItem>standardized measure of perforamnce</ListItem></Appear>
+              <Appear><ListItem>absolute vs. relative</ListItem></Appear>
+              <Appear><ListItem>simple and illustrative</ListItem></Appear>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
+              Web applications create powerful workflows...
             </Heading>
             <Interactive/>
           </Slide>
           <Slide transition={["spin", "slide"]} bgColor="tertiary">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+              Made with love in Toronto by
             </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+            <Link href="http://www.github.com/debraid">
+              Derek Braid
+            </Link>
           </Slide>
         </Deck>
       </Spectacle>
