@@ -53,12 +53,6 @@ export default class Presentation extends Component {
               </Heading>
             </Appear>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>You can't outrun a bear!</Quote>
-              <Cite>Unknown</Cite>
-            </BlockQuote>
-          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>The "Right" Approach</Heading>
             <Layout>
@@ -101,8 +95,8 @@ export default class Presentation extends Component {
                   Software eats the world...
                 </Heading>
                 <List margin="10px">
-                  <ListItem>1997: Kasperov falls to chess robot</ListItem>
-                  <ListItem>2016: AlphaGO champion defeated by Google AI (Deepmind) team</ListItem>
+                  <ListItem padding="0px 10px">1997: Kasperov falls to chess robot</ListItem>
+                  <ListItem padding="0px 10px">2016: AlphaGO champion defeated by Google AI (Deepmind) team</ListItem>
                 </List>
               </Fill>
               <Fill>
@@ -110,36 +104,12 @@ export default class Presentation extends Component {
                   Meanwhile in sports...
                 </Heading>
                 <List margin="10px">
-                  <ListItem>2003: Moneyball</ListItem>
-                  <ListItem>2016: most NHL teams (~66% have not embraced 'analytics')</ListItem>
+                  <ListItem padding="0px 10px">2003: Moneyball</ListItem>
+                  <ListItem padding="0px 10px">2016: some NHL teams (~1/3rd) take analytics seriously</ListItem>
+                  <ListItem padding="0px 10px">Catapult, SportVu, Sportlogiq are interesting</ListItem>
                 </List>
               </Fill>
             </Layout>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Absolute vs. Relative Performance
-            </Heading>
-            <Markdown>
-              {`
-Can we visualize both a single player and the whole league?
-* data tables are noisey
-* chart magic is confusing
-* no wasted ink, no wasted time/energy
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Box and Whisker Plots
-            </Heading>
-            <Markdown>
-              {`
-Simple way to visualize both relative and absolute performance
-* identify the player
-* compare to peers
-              `}
-            </Markdown>
           </Slide>
           <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
@@ -181,20 +151,40 @@ Simple way to visualize both relative and absolute performance
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Layout>
               <Fill>
-                <Image padding="20px" margin="20px" width="66%" src={images.players.kopi_slug.replace("/", "")}/>
+                <Image padding="15px" margin="15px" width="66%" src={images.players.kopi_slug.replace("/", "")}/>
               </Fill>
               <Fill>
-                <Image padding="20px" margin="20px" width="66%" src={images.players.ovi_slug.replace("/", "")}/>
+                <Image padding="15px" margin="15px" width="66%" src={images.players.ovi_slug.replace("/", "")}/>
               </Fill>
             </Layout>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Layout>
               <Fill>
-                <Image padding="20px" margin="20px" width="100%" src={images.players.kopi.replace("/", "")}/>
+                <Image padding="15px" margin="15px" width="100%" src={images.players.kopi.replace("/", "")}/>
               </Fill>
               <Fill>
-                <Image padding="20px" margin="20px" width="100%" src={images.players.ovi.replace("/", "")}/>
+                <Image padding="15px" margin="15px" width="100%" src={images.players.ovi.replace("/", "")}/>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="15px" margin="15px" width="66%" src={images.players.hall_slug.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="15px" margin="15px" width="66%" src={images.players.lars_slug.replace("/", "")}/>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary">
+            <Layout>
+              <Fill>
+                <Image padding="15px" margin="15px" width="100%" src={images.players.hall.replace("/", "")}/>
+              </Fill>
+              <Fill>
+                <Image padding="15px" margin="15px" width="100%" src={images.players.lars.replace("/", "")}/>
               </Fill>
             </Layout>
           </Slide>
@@ -205,6 +195,38 @@ Simple way to visualize both relative and absolute performance
               <Appear><ListItem>simple and illustrative</ListItem></Appear>
             </List>
           </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <BlockQuote>
+              <Quote>You can't outrun a bear!</Quote>
+              <Cite>Unknown</Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Absolute vs. Relative Performance
+            </Heading>
+            <Markdown>
+              {`
+Can we visualize both a single player and the whole league?
+* data tables are noisey
+* chart magic is confusing
+* no wasted ink, no wasted time/energy
+              `}
+            </Markdown>
+          </Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Box and Whisker Plots
+            </Heading>
+            <Markdown>
+              {`
+Simple way to visualize both relative and absolute performance
+* identify the player
+* compare to peers
+              `}
+            </Markdown>
+          </Slide>
+          
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
               Web applications create powerful workflows...
