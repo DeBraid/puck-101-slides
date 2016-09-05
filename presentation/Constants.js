@@ -1,8 +1,7 @@
 const Constants = {
 	images : {
 		city: require("../assets/city.jpg"),
-		kat: require("../assets/kat.png"),
-		logo: require("../assets/formidable-logo.svg"),
+		high_corr: require("../assets/high-corr-nhl-stats.png"),
 		players: {
 			subban: require("../assets/subban.png"),
 			subban_slug: require("../assets/subban-slug.png"),

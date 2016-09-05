@@ -87,6 +87,34 @@ export default class Presentation extends Component {
           </Slide>
           <Slide transition={["spin", "zoom"]} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
+              What are analytics anyway?
+            </Heading>
+            <Layout>
+              <Fill>
+                <List margin="10px">
+                  <ListItem padding="0px 10px">From 2007-15 R^2 between CF% and points is 0.4</ListItem>
+                  <ListItem padding="0px 10px">Since 2008 correlation of shot share (CF%) to winning has decreased from 0.6 to under 0.4.  </ListItem>
+                  <ListItem padding="0px 10px">Competitive forces at work...</ListItem>
+                </List>
+                <Link href="http://www.hockeyprospectus.com/re-visiting-the-relationship-between-corsi-and-team-standings/" target="_blank">
+                  via Hockey Prospectus
+                </Link>
+              </Fill>
+            </Layout>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <BlockQuote>
+              <Quote>Inconsistencies in data recording from rink to rink means location and amount of shots, giveaways and takeaways are not reliable.</Quote>
+              <Cite>
+                <Link href="http://statsportsconsulting.com/2014/11/24/1357/" target="_blank">
+                  Michael Schuckers (Stat Sports Consulting)
+                </Link>
+              </Cite>
+            </BlockQuote>
+          </Slide>
+          
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
               Great time to be alive: Human + Machine > Human
             </Heading>
             <Layout>
@@ -110,6 +138,32 @@ export default class Presentation extends Component {
                 </List>
               </Fill>
             </Layout>
+          </Slide>
+           <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
+            <Appear fid="1">
+              <Heading size={1} caps fit textColor="primary">
+                Which stats do correlate to winning?
+              </Heading>
+            </Appear>
+            <Appear fid="2">
+              <Heading size={1} caps fit textColor="tertiary">
+                Are they reliable?
+              </Heading>
+            </Appear>
+            <Appear fid="3">
+              <Heading size={1} caps fit textColor="primary">
+                Can we use them to make smarter decisions?
+              </Heading>
+            </Appear>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+            <Image src={images.high_corr.replace("/", "")} margin="0px auto 10px" height="400px"/>
+            <Text textColor="primary" textFont="primary">
+              High Correlation Metrics from 2008-2013 
+              <Link margin="0 0 0 5px" href="http://www.pensionplanpuppets.com/2013/7/10/4508094/what-statistics-are-meaningful-in-a-given-season-corsi-fenwick-PDO-hits-fights-blocked-shots" target="_blank">
+                via Steve Burtch
+              </Link>
+            </Text>
           </Slide>
           <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
