@@ -165,6 +165,29 @@ export default class Presentation extends Component {
               </Link>
             </Text>
           </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <BlockQuote>
+              <Quote>Ugly things are made by those who strive make something beautiful, and commonly beautiful things are made by those who strive to make something useful.</Quote>
+              <Cite>
+                Oscar Wilde
+              </Cite>
+              <Cite>
+                'The Value of Art in Modern Life', 1884
+              </Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Box and Whisker Plots
+            </Heading>
+            <Markdown>
+              {`
+Simple way to visualize both relative and absolute performance
+* identify the player
+* compare to peers
+              `}
+            </Markdown>
+          </Slide>
           <Slide transition={["slide"]} bgImage={images.rink.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
@@ -268,19 +291,6 @@ Can we visualize both a single player and the whole league?
               `}
             </Markdown>
           </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Box and Whisker Plots
-            </Heading>
-            <Markdown>
-              {`
-Simple way to visualize both relative and absolute performance
-* identify the player
-* compare to peers
-              `}
-            </Markdown>
-          </Slide>
-          
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
               Web applications create powerful workflows...
