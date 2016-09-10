@@ -53,6 +53,18 @@ export default class Presentation extends Component {
               </Heading>
             </Appear>
           </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <BlockQuote>
+              <Quote>
+                Dictation being the vehicle of thoughts, if the appearance offends, a further knowledge is not sought.
+              </Quote>
+              <Cite>
+                <Link href="http://statsportsconsulting.com/2014/11/24/1357/" target="_blank">
+                  Samuel Johnson, Died 1784, "only truly great critic of English lit"
+                </Link>
+              </Cite>
+            </BlockQuote>
+          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>The "Right" Approach</Heading>
             <Layout>

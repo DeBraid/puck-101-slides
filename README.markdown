@@ -6,7 +6,7 @@ Some thoughts on hockey analytics, and a demo of NHL charts made with d3js.
 
 Send to [@Puck_Quant](http://twitter.com/Puck_Quant).
 
-Updated [demo](http://defeated-bait.surge.sh/) is here.
+Updated [demo](http://vast-trail.surge.sh/) is here.
 
 #### Thanks
 
