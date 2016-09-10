@@ -167,12 +167,9 @@ export default class Presentation extends Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
             <BlockQuote>
-              <Quote>Ugly things are made by those who strive make something beautiful, and commonly beautiful things are made by those who strive to make something useful.</Quote>
+              <Quote>Ugly things made by those who strive to make something beautiful, while beautiful things are made by those who strive to make something useful.</Quote>
               <Cite>
-                Oscar Wilde
-              </Cite>
-              <Cite>
-                'The Value of Art in Modern Life', 1884
+                Oscar Wilde, 'The Value of Art in Modern Life', 1884
               </Cite>
             </BlockQuote>
           </Slide>
@@ -267,7 +264,7 @@ Simple way to visualize both relative and absolute performance
           </Slide>
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
             <List>
-              <Appear><ListItem>standardized measure of perforamnce</ListItem></Appear>
+              <Appear><ListItem>standardized measure of performance</ListItem></Appear>
               <Appear><ListItem>absolute vs. relative</ListItem></Appear>
               <Appear><ListItem>simple and illustrative</ListItem></Appear>
             </List>
@@ -277,19 +274,6 @@ Simple way to visualize both relative and absolute performance
               <Quote>You can't outrun a bear!</Quote>
               <Cite>Unknown</Cite>
             </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Absolute vs. Relative Performance
-            </Heading>
-            <Markdown>
-              {`
-Can we visualize both a single player and the whole league?
-* data tables are noisey
-* chart magic is confusing
-* no wasted ink, no wasted time/energy
-              `}
-            </Markdown>
           </Slide>
           <Slide transition={["slide"]} bgColor="primary">
             <Heading size={1} caps fit textColor="tertiary">
@@ -301,9 +285,21 @@ Can we visualize both a single player and the whole league?
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
               Made with love in Toronto by
             </Heading>
-            <Link href="http://www.github.com/debraid">
-              Derek Braid
-            </Link>
+            <Heading size={5} textColor="black">
+                <Link href="http://www.github.com/debraid">
+                  Derek Braid
+                </Link>
+            </Heading>
+            <Heading size={6} textColor="black">
+              <Link href="https://twitter.com/Puck_Quant">
+                @Puck_Quant
+              </Link>
+            </Heading>
+            <Heading size={6} textColor="black">
+              <Link href="https://twitter.com/Royal_Arse">
+                @Royal_Arse
+              </Link>
+            </Heading>
           </Slide>
         </Deck>
       </Spectacle>
