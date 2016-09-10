@@ -36,14 +36,15 @@ export default class Interactive extends Component {
     let { count, styles, demo_link, btn_msg } = this.state;
     return (
       <div>
-        <Heading size={5} textColor="black">
-          The demo has been viewed { count } times
-        </Heading>
         <button style={ styles } 
           type="button" 
           onClick={this.handleClick}>
             { btn_msg }
         </button>
+        <Heading size={5} textColor="black">
+          NOTE: demo requires <Link href="https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh">this</Link> Chrome Extension to work (allows for random URL to accept data from the source: <Link>http://puckalytics.com</Link> domain)
+        </Heading>
+        
       </div>
     );
   }
